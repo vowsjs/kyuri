@@ -2,52 +2,55 @@
 
 a Gherkin dialect built specifically for asynchronous programming that targets javascript.
 
-
 ## Installation
 
 ## Example
 
 A feature like so:
-  
-  Feature: Addition
-    In order to avoid silly mistakes
-    As a math idiot
-    I want to be told the sum of two numbers
-  
-    Scenario: Add two numbers
-      Given I have entered 50 into the calculator
-      And I have entered 70 into the calculator
-      When I press add
-      Then the result should be 120 on the screen
+
+<pre>  
+Feature: Addition
+  In order to avoid silly mistakes
+  As a math idiot
+  I want to be told the sum of two numbers
+
+  Scenario: Add two numbers
+    Given I have entered 50 into the calculator
+    And I have entered 70 into the calculator
+    When I press add
+    Then the result should be 120 on the screen
+</pre>
 
 Should output:
 
-  vows.describe('Addition').addBatch({
-    "Given": {
+<pre>
+vows.describe('Addition').addBatch({
+  "Given": {
+    topic: function () {/* Do something async */},
+    'I have entered 50 into the calculator': function (topic) {
+      /* Test the result here */
+    },
+    "And": {
       topic: function () {/* Do something async */},
       'I have entered 50 into the calculator': function (topic) {
         /* Test the result here */
       },
-      "And": {
+      "When": {
         topic: function () {/* Do something async */},
-        'I have entered 50 into the calculator': function (topic) {
+        'I press add': function (topic) {
           /* Test the result here */
         },
-        "When": {
+        "Then": {
           topic: function () {/* Do something async */},
-          'I press add': function (topic) {
+          'the result should be 120 on the screen': function (topic) {
             /* Test the result here */
           },
-          "Then": {
-            topic: function () {/* Do something async */},
-            'the result should be 120 on the screen': function (topic) {
-              /* Test the result here */
-            },
-          }
         }
       }
-    }      
-  }).export(module);
+    }
+  }      
+}).export(module);
+</pre>
 
 ## Authors
 #### Charlie Robbins
