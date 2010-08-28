@@ -9,6 +9,10 @@ require 'rubygems'
 require 'yaml'
 require 'json'
 
+#
+# Remark: This file doesn't print pretty JSON. 
+#         Too many dependencies to make that work.
+#
 File.open('src/i8n.yml', 'r') do |infile|
   yaml_data = ''
   while (line = infile.gets)
@@ -17,5 +21,5 @@ File.open('src/i8n.yml', 'r') do |infile|
   
   parsed = YAML::load(yaml_data)
   
-  File.open('lib/kyuri/i8n.json', 'w') { |f| f.write(parsed.to_json) }
+  File.open('lib/kyuri/i8n.js', 'w') { |f| f.write("exports.i8n = #{parsed.to_json};") }
 end
