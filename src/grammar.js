@@ -1,5 +1,5 @@
 /*
- * Grammar.target: Target file for building the grammar.js file from the keyword list in i8n.json 
+ * Grammar.target: Target file for building the grammar.js file from the keyword list in i18n.json 
  *
  * (C) 2010 Charlie Robbins
  * MIT LICENSE

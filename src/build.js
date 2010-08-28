@@ -1,5 +1,5 @@
 /*
- * build.js: Build script for converting i8n.yml to json then building the grammar.js file
+ * build.js: Build script for converting i18n.yml to json then building the grammar.js file
  *
  * (C) 2010 Charlie Robbins
  * MIT LICENSE
@@ -10,17 +10,17 @@ var fs = require('fs'),
     jison = require('jison');
 
 /*// Execute our little Ruby script to convert YAML to JSON
-// since js-yaml can't handle i8n.yml
-var yamlJson = spawn('ruby', ['src/i8n-generator.rb']);
+// since js-yaml can't handle i18n.yml
+var yamlJson = spawn('ruby', ['src/i18n-generator.rb']);
 
 yamlJson.on('exit', function (code) {
-  fs.readFile('src/i8n.json', 'utf8', function (err, data) {
+  fs.readFile('src/i18n.json', 'utf8', function (err, data) {
     if (err) {
       throw err;
     }
     
     var dirtyJson = data.toString();
-    fs.writeFile('src/i8n.json', JSON.stringify(dirtyJson), 'utf8', function (err) {
+    fs.writeFile('src/i18n.json', JSON.stringify(dirtyJson), 'utf8', function (err) {
       
     });
   });
