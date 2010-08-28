@@ -6,9 +6,11 @@
  *
  */
 
-exports.grammar = {
+var jison = require('jison');
+
+var grammar = {
   'comment': 'Adapated from the Ragel-based Gherkin parser',
   'author':  'Charlie Robbins',
   
-  
+  'tokens': 'FEATURE SCENARIO EXAMPLE EXAMPLE_ROW OPERATOR SENTENCE TERMINATOR INDENT OUTDENT'
 };

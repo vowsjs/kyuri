@@ -7,7 +7,7 @@
  */
  
 var fs = require('fs'),
-    jison = require('jison');
+    sys = require('sys');
 
 /*// Execute our little Ruby script to convert YAML to JSON
 // since js-yaml can't handle i18n.yml
@@ -29,7 +29,7 @@ yamlJson.on('exit', function (code) {
 var grammarPath = 'src/grammar.js';
 var parserPath = 'lib/kyuri/parser.js';
 
-debug('Reading grammar file located at: ' + grammarPath);
+sys.puts('Reading grammar file located at: ' + grammarPath);
 fs.readFile(grammarPath, function (err, data) {
   if (err) {
     throw err;
@@ -41,6 +41,6 @@ fs.readFile(grammarPath, function (err, data) {
       throw err;
     }
     
-    debug('Parser successfully written to: ' + parserPath);
+    sys.puts('Parser successfully written to: ' + parserPath);
   });
 });
