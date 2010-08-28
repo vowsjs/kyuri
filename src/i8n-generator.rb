@@ -17,5 +17,5 @@ File.open('src/i8n.yml', 'r') do |infile|
   
   parsed = YAML::load(yaml_data)
   
-  File.open('src/i8n.json', 'w') { |f| f.write(parsed.to_json) }
+  File.open('lib/kyuri/i8n.json', 'w') { |f| f.write(parsed.to_json) }
 end

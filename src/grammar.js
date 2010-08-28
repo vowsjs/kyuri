@@ -7,8 +7,8 @@
  */
 
 exports.grammar = {
-  "comment": "Adapated from the Ragel-based Gherkin parser",
-  "author": "Charlie Robbins",
+  'comment': 'Adapated from the Ragel-based Gherkin parser',
+  'author':  'Charlie Robbins',
   
   
 };
