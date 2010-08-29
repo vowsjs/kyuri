@@ -1,13 +1,10 @@
-
-
 # Kyuri - plain words go in, VowsJS stubs come out
 
-
-Kyuri is a node.js [Cucumber][0] implementation with a few extra asynchronous keywords. supports 160+ languages and exports to VowsJS stubs
+Kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. supports 160+ languages and exports to [VowsJS][3] stubs
 
 ## Example
 
-A feature like so:
+A feature in Kyuri might look like this...
 
 <pre>  
 Feature: Addition
@@ -67,18 +64,21 @@ vows.describe('Addition').addBatch({
 
 ###VowsJS
 
-Vows is a popular behavior driven development framework for Node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
+[Vows][3]  is a popular Behavior Driven Development framework for node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
 
 Instead of crafting your VowsJS code from hand (using JavaScript), Nuptials allows you to auto-generate Vows stubs. 
 
 For further information about VowsJS, please visit it's repository here.
 
 ###Protip: 
-Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other project, Nuptials.
+Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other Node Knockout Entry, [Nuptials][3].
 
 
 ## Authors
 #### Charlie Robbins
 
 [0]: http://cukes.info "Cucumber"
+[1]: http://nodejs.org "node.js"
+[2]: http://github.com/nodejitsu/nuptials "Nuptials"
+[3]: http://vowsjs.org "VowsJs"
 
