@@ -79,7 +79,7 @@ Kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 
 ## Authors
 ### Created for Node Knockout 2010 by The NYC Nodejitsu Ninjas
-#### almost entirely Charlie Robbins, he knows nodejitsu ^_^_
+#### almost entirely Charlie Robbins, he knows nodejitsu ^_^
 
 [0]: http://cukes.info "Cucumber"
 [1]: http://nodejs.org "node.js"
