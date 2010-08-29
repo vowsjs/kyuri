@@ -1,13 +1,13 @@
 
-# Kyuri - plain words go in, [VowsJS][3] stubs come out
+# kyuri - plain words go in, [VowsJS][3] stubs come out
 
 <img src = "http://imgur.com/crtzz.gif" border="0">
 
-Kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. it supports 160+ languages and exports to [VowsJS][3] stubs
+kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. it supports 160+ languages and exports to [VowsJS][3] stubs
 
 ## Example
 
-A feature in Kyuri might look like this...
+A feature in kyuri might look like this...
 
 <pre>Feature: Addition
   In order to avoid silly mistakes
@@ -60,7 +60,7 @@ vows.describe('Addition').addBatch({
   curl http://npmjs.org/install.sh | sh
 </pre>
 
-### Installing prenup
+### Installing kyuri
 <pre>
   npm install kyuri
 </pre>
@@ -74,7 +74,7 @@ Instead of crafting your VowsJS code from hand (using JavaScript), prenup allows
 For further information about VowsJS, please visit it's repository here.
 
 ###Protip: 
-Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other Node Knockout Entry, [prenup][2].
+kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using kyuri and a rich user-interface check out our other Node Knockout Entry, [prenup][2].
 
 
 ## Authors
