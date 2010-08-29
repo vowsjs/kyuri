@@ -1,7 +1,9 @@
 
-# Kyuri
 
-## a Gherkin dialect built specifically for asynchronous programming that targets javascript. english goes in, VowsJS test stubs go out.
+# Kyuri - plain words go in, VowsJS stubs come out
+
+
+Kyuri is a node.js [Cucumber][0] implementation with a few extra asynchronous keywords. supports 160+ languages and exports to VowsJS stubs
 
 ## Example
 
@@ -78,4 +80,5 @@ Kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 ## Authors
 #### Charlie Robbins
 
+[0]: http://cukes.info "Cucumber"
 
