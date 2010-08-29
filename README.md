@@ -9,8 +9,7 @@ Kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchrono
 
 A feature in Kyuri might look like this...
 
-<pre>  
-Feature: Addition
+<pre>Feature: Addition
   In order to avoid silly mistakes
   As a math idiot
   I want to be told the sum of two numbers
