@@ -25,30 +25,26 @@ Should output:
 
 <pre>
 vows.describe('Addition').addBatch({
-  "Given": {
-    topic: function () {/* Do something async */},
-    'I have entered 50 into the calculator': function (topic) {
-      /* Test the result here */
-    },
-    "And": {
-      topic: function () {/* Do something async */},
-      'I have entered 50 into the calculator': function (topic) {
-        /* Test the result here */
-      },
-      "When": {
-        topic: function () {/* Do something async */},
-        'I press add': function (topic) {
-          /* Test the result here */
-        },
-        "Then": {
-          topic: function () {/* Do something async */},
-          'the result should be 120 on the screen': function (topic) {
-            /* Test the result here */
-          },
-        }
-      }
-    }
-  }      
+  "Add two numbers": {
+  	"GIVEN I have entered 50 into the calculator": {
+		  topic: function () {
+		    /* Setup your test conditions here */
+		  },
+			"AND I have entered 70 into the calculator": {
+			  topic: function () {
+			    /* Setup your test conditions here */
+			  },
+				"WHEN I press add": {
+				  topic: function () {
+				    /* Setup your test conditions here */
+				  },
+					"THEN the result should be 120 on the screen": function () {
+					  /* Setup your test assertions here */
+					},
+				}
+			}
+		}
+  }
 }).export(module);
 </pre>
 
