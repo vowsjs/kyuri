@@ -13,7 +13,21 @@ var kyuri = require('kyuri'),
     path = require('path'),
     vows = require('vows'),
     assert = require('assert'),
-    eyes = require('eyes');
+    inspect = require('eyes').inspector({
+      styles: {
+        all:     'cyan',      // Overall style applied to everything
+        label:   'underline', // Inspection labels, like 'array' in `array: [1, 2, 3]`
+        other:   'inverted',  // Objects which don't have a literal representation, such as functions
+        key:     'bold',      // The keys in object literals, like 'a' in `{a: 1}`
+
+        special: 'grey',      // null, undefined...
+        string:  'green',
+        number:  'magenta',
+        bool:    'blue',      // true false
+        regexp:  'green',     // /\d+/
+      },
+      maxLength: 4096
+    });
     
 var readAllLines = function (filename) {
   return function () {
@@ -23,18 +37,18 @@ var readAllLines = function (filename) {
 
 vows.describe('kyuri/lexer').addBatch({
   "When using the Kyuri lexer,": {
-    "lexing simple.feature": {
+    /*"lexing simple.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
       "should lex correctly": function (err, data) {
         assert.isNotNull(data.toString());
         eyes.inspect(kyuri.tokens(data.toString()));
       }
-    },
+    },*/
     "lexing complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should lex correctly": function (err, data) {
         assert.isNotNull(data.toString());
-        eyes.inspect(kyuri.tokens(data.toString()));
+        inspect(kyuri.tokens(data.toString()));
       }
     }
   }

@@ -9,7 +9,7 @@ Feature: Addition
 		When I press add
 		Then the result should be 120 on the screen
 
-	Scenario: Add three numbers
+	Scenario Outline: Add three numbers
 		Given I have entered <number1> into the calculator
 		And I have entered <number2> into the calculator
 		And I have entered 120 into the calculator
@@ -21,3 +21,9 @@ Feature: Addition
 			| 10      | 20      | 150     |
 			| 20      | 40      | 180     |
 			| 40      | 60      | 220     |
+			
+	Scenario: Add two numbers
+		Given I have entered 50 into the calculator
+		And I have entered 70 into the calculator
+		When I press add
+		Then the result should be 120 on the screen
