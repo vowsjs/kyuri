@@ -65,7 +65,7 @@ vows.describe('Addition').addBatch({
 
 [Vows][3]  is a popular [Behavior Driven Development[4] framework for node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
 
-Instead of crafting your VowsJS code from hand (using JavaScript), prenup allows you to auto-generate Vows stubs. 
+Instead of crafting your VowsJS code from hand (using JavaScript), kyuri allows you to auto-generate Vows stubs. 
 
 For further information about VowsJS, please visit it's repository here.
 
