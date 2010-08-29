@@ -1,6 +1,6 @@
 # Kyuri - plain words go in, VowsJS stubs come out
 
-Kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. supports 160+ languages and exports to [VowsJS][3] stubs
+Kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. it supports 160+ languages and exports to [VowsJS][3] stubs
 
 ## Example
 
@@ -49,6 +49,7 @@ vows.describe('Addition').addBatch({
   }      
 }).export(module);
 </pre>
+
 
 ## Installation
 
