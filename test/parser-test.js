@@ -13,8 +13,22 @@ var kyuri = require('kyuri'),
     path = require('path'),
     vows = require('vows'),
     assert = require('assert'),
-    eyes = require('eyes');
-    
+    inspect = require('eyes').inspector({
+      styles: {
+        all:     'cyan',      // Overall style applied to everything
+        label:   'underline', // Inspection labels, like 'array' in `array: [1, 2, 3]`
+        other:   'inverted',  // Objects which don't have a literal representation, such as functions
+        key:     'bold',      // The keys in object literals, like 'a' in `{a: 1}`
+
+        special: 'grey',      // null, undefined...
+        string:  'green',
+        number:  'magenta',
+        bool:    'blue',      // true false
+        regexp:  'green',     // /\d+/
+      },
+      maxLength: 4096
+    });
+        
 var readAllLines = function (filename) {
   return function () {
     fs.readFile(filename, encoding = 'ascii', this.callback);
@@ -27,14 +41,14 @@ vows.describe('kyuri/parser').addBatch({
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
       "should parse correctly": function (err, data) {
         assert.isNotNull(data.toString());
-        eyes.inspect(kyuri.parse(data.toString()));
+        inspect(kyuri.parse(data.toString()));
       }
     },
     "parsing complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should parse correctly": function (err, data) {
         assert.isNotNull(data.toString());
-        eyes.inspect(kyuri.parse(data.toString()));
+        inspect(kyuri.parse(data.toString()));
       }
     }
   }
