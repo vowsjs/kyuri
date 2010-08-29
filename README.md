@@ -72,7 +72,7 @@ Instead of crafting your VowsJS code from hand (using JavaScript), Nuptials allo
 For further information about VowsJS, please visit it's repository here.
 
 ###Protip: 
-Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other Node Knockout Entry, [Nuptials][3].
+Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other Node Knockout Entry, [Nuptials][2].
 
 
 ## Authors
