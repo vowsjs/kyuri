@@ -1,14 +1,15 @@
 
-# Kyuri
+# kyuri - plain words go in, [VowsJS][3] stubs come out
 
-## a Gherkin dialect built specifically for asynchronous programming that targets javascript. english goes in, VowsJS test stubs go out.
+<img src = "http://imgur.com/nKf61.gif" border="0">
+
+kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. it supports 160+ languages and exports to [VowsJS][3] stubs
 
 ## Example
 
-A feature like so:
+A feature in kyuri might look like this...
 
-<pre>  
-Feature: Addition
+<pre>Feature: Addition
   In order to avoid silly mistakes
   As a math idiot
   I want to be told the sum of two numbers
@@ -51,6 +52,7 @@ vows.describe('Addition').addBatch({
 }).export(module);
 </pre>
 
+
 ## Installation
 
 ### Installing npm (node package manager)
@@ -58,24 +60,29 @@ vows.describe('Addition').addBatch({
   curl http://npmjs.org/install.sh | sh
 </pre>
 
-### Installing nuptials
+### Installing kyuri
 <pre>
   npm install kyuri
 </pre>
 
 ###VowsJS
 
-Vows is a popular behavior driven development framework for Node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
+[Vows][3]  is a popular [Behavior Driven Development[4] framework for node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
 
-Instead of crafting your VowsJS code from hand (using JavaScript), Nuptials allows you to auto-generate Vows stubs. 
+Instead of crafting your VowsJS code from hand (using JavaScript), prenup allows you to auto-generate Vows stubs. 
 
 For further information about VowsJS, please visit it's repository here.
 
 ###Protip: 
-Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other project, Nuptials.
+kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using kyuri and a rich user-interface check out our other Node Knockout Entry, [prenup][2].
 
 
 ## Authors
-#### Charlie Robbins
+### Created for Node Knockout 2010 by The NYC Nodejitsu Ninjas
+#### almost entirely Charlie Robbins, he knows nodejitsu ^_^
 
-
+[0]: http://cukes.info "Cucumber"
+[1]: http://nodejs.org "node.js"
+[2]: http://github.com/nodejitsu/prenup "prenup"
+[3]: http://vowsjs.org "VowsJs"
+[4]: http://en.wikipedia.org/wiki/Behavior_Driven_Development "Behavior Driven Development"
