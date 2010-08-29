@@ -35,20 +35,20 @@ var readAllLines = function (filename) {
   } 
 };
 
-vows.describe('kyuri/parser').addBatch({
-  "When using the Kyuri parser,": {
-    "parsing simple.feature": {
+vows.describe('kyuri/generator').addBatch({
+  "When using the Kyuri default code generator,": {
+    "compiling simple.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
       "should parse correctly": function (err, data) {
         assert.isNotNull(data.toString());
-        inspect(kyuri.parse(data.toString()));
+        kyuri.compile(data.toString(), { directory: path.join(__dirname, 'output') });
       }
     },
-    "parsing complex.feature": {
+    "compiling complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should parse correctly": function (err, data) {
         assert.isNotNull(data.toString());
-        inspect(kyuri.parse(data.toString()));
+        kyuri.compile(data.toString(), { directory: path.join(__dirname, 'output') });
       }
     }
   }

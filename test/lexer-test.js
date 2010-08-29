@@ -33,17 +33,17 @@ var readAllLines = function (filename) {
   return function () {
     fs.readFile(filename, encoding = 'ascii', this.callback);
   } 
-}
+};
 
 vows.describe('kyuri/lexer').addBatch({
   "When using the Kyuri lexer,": {
-    /*"lexing simple.feature": {
+    "lexing simple.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
       "should lex correctly": function (err, data) {
         assert.isNotNull(data.toString());
         eyes.inspect(kyuri.tokens(data.toString()));
       }
-    },*/
+    },
     "lexing complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should lex correctly": function (err, data) {
