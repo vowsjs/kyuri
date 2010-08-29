@@ -67,7 +67,7 @@ vows.describe('Addition').addBatch({
 
 ###VowsJS
 
-[Vows][3]  is a popular Behavior Driven Development framework for node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
+[Vows][3]  is a popular [Behavior Driven Development[4] framework for node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
 
 Instead of crafting your VowsJS code from hand (using JavaScript), Nuptials allows you to auto-generate Vows stubs. 
 
@@ -84,3 +84,4 @@ Kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 [1]: http://nodejs.org "node.js"
 [2]: http://github.com/nodejitsu/nuptials "Nuptials"
 [3]: http://vowsjs.org "VowsJs"
+[4]: http://en.wikipedia.org/wiki/Behavior_Driven_Development "Behavior Driven Development"
