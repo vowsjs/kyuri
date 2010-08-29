@@ -1,4 +1,7 @@
+
 # Kyuri - plain words go in, [VowsJS][3] stubs come out
+
+<img src = "http://imgur.com/I6j9h.gif" border="0">
 
 Kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. it supports 160+ languages and exports to [VowsJS][3] stubs
 
@@ -82,4 +85,3 @@ Kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 [1]: http://nodejs.org "node.js"
 [2]: http://github.com/nodejitsu/nuptials "Nuptials"
 [3]: http://vowsjs.org "VowsJs"
-
