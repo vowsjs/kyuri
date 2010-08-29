@@ -1,8 +1,7 @@
+
 # Kyuri
 
-a Gherkin dialect built specifically for asynchronous programming that targets javascript.
-
-## Installation
+## a Gherkin dialect built specifically for asynchronous programming that targets javascript. english goes in, VowsJS test stubs go out.
 
 ## Example
 
@@ -52,8 +51,31 @@ vows.describe('Addition').addBatch({
 }).export(module);
 </pre>
 
+## Installation
+
+### Installing npm (node package manager)
+<pre>
+  curl http://npmjs.org/install.sh | sh
+</pre>
+
+### Installing nuptials
+<pre>
+  npm install kyuri
+</pre>
+
+###VowsJS
+
+Vows is a popular behavior driven development framework for Node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
+
+Instead of crafting your VowsJS code from hand (using JavaScript), Nuptials allows you to auto-generate Vows stubs. 
+
+For further information about VowsJS, please visit it's repository here.
+
+###Protip: 
+Kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using Kyuri and a rich user-interface check out our other project, Nuptials.
+
+
 ## Authors
 #### Charlie Robbins
-
 
 
