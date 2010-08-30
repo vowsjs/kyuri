@@ -1,4 +1,5 @@
 
+
 # kyuri - plain words go in, [VowsJS][3] stubs come out
 
 <img src = "http://imgur.com/nKf61.gif" border="0">
@@ -66,8 +67,6 @@ vows.describe('Addition').addBatch({
 [Vows][3]  is a popular [Behavior Driven Development][4] framework for node.js. Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies.
 
 Instead of crafting your VowsJS code from hand (using JavaScript), kyuri allows you to auto-generate Vows stubs. 
-
-For further information about VowsJS, please visit it's repository here.
 
 ###Protip: 
 kyuri is meant to be a low-level tool. if you want to compose Features and Scenarios using kyuri and a rich user-interface check out our other Node Knockout Entry, [prenup][2].
