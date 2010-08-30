@@ -74,11 +74,13 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 
 
 ## Authors
-### Created for Node Knockout 2010 by The NYC Nodejitsu Ninjas
-#### almost entirely Charlie Robbins, he knows nodejitsu ^_^
+### created by Charlie Robbins for Node Knockout 2010
+### big ups to [Jeremy Ashkenas][5] for being a languages black-belt and making [coffee-script][6]
 
 [0]: http://cukes.info "Cucumber"
 [1]: http://nodejs.org "node.js"
 [2]: http://github.com/nodejitsu/prenup "prenup"
 [3]: http://vowsjs.org "VowsJs"
 [4]: http://en.wikipedia.org/wiki/Behavior_Driven_Development "Behavior Driven Development"
+[5]: http://github.com/jashkenas "Jeremy Ashkenas"
+[6]: http://github.com/jashkenas/coffee-script "coffee-script"
