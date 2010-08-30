@@ -73,7 +73,7 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 
 
 ## Authors
-### created by Charlie Robbins for Node Knockout 2010
+### created by [Charlie Robbins][7] for Node Knockout 2010
 ### big ups to [Jeremy Ashkenas][5] for being a languages black-belt and making [coffee-script][6]
 
 [0]: http://cukes.info "Cucumber"
@@ -83,3 +83,4 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 [4]: http://en.wikipedia.org/wiki/Behavior_Driven_Development "Behavior Driven Development"
 [5]: http://github.com/jashkenas "Jeremy Ashkenas"
 [6]: http://github.com/jashkenas/coffee-script "coffee-script"
+[7]: http://github.com/indexzero "Charlie Robbins"
