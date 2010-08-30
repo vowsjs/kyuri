@@ -2,7 +2,7 @@
 
 # kyuri - plain words go in, [VowsJS][3] stubs come out
 
-<img src = "http://imgur.com/nKf61.gif" border="0">
+<img src = "http://imgur.com/WwNkr.gif" border="0">
 
 kyuri is a [node.js][1] [Cucumber][0] implementation with a few extra asynchronous keywords. it supports 160+ languages and exports to [VowsJS][3] stubs
 
