@@ -1,5 +1,6 @@
 
 
+
 # kyuri - plain words go in, [VowsJS][3] stubs come out
 
 <img src = "http://imgur.com/WwNkr.gif" border="0">
@@ -49,6 +50,9 @@ vows.describe('Addition').addBatch({
 }).export(module);
 </pre>
 
+## Compatibility
+
+[gherkin][8] is fully supported by kyuri. kyuri can push and pull updates from the gherkin project, check out [i18n.js](http://github.com/nodejitsu/kyuri/blob/master/lib/kyuri/i18n.js) and [i18n-generator.rb](http://github.com/nodejitsu/kyuri/blob/master/src/i18n-generator.rb)
 
 ## Installation
 
@@ -84,3 +88,4 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 [5]: http://github.com/jashkenas "Jeremy Ashkenas"
 [6]: http://github.com/jashkenas/coffee-script "coffee-script"
 [7]: http://github.com/indexzero "Charlie Robbins"
+[8]: http://wiki.github.com/aslakhellesoy/cucumber/gherkin "gherkin"
