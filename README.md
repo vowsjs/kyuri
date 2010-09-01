@@ -52,7 +52,10 @@ vows.describe('Addition').addBatch({
 
 ## Compatibility
 
-[gherkin][8] is fully supported by kyuri. kyuri can push and pull updates from the gherkin project, check out [i18n.js](http://github.com/nodejitsu/kyuri/blob/master/lib/kyuri/i18n.js) and [i18n-generator.rb](http://github.com/nodejitsu/kyuri/blob/master/src/i18n-generator.rb)
+[gherkin][8] is almost fully supported by kyuri. kyuri can push and pull updates from the gherkin project, check out [i18n.js](http://github.com/nodejitsu/kyuri/blob/master/lib/kyuri/i18n.js) and [i18n-generator.rb](http://github.com/nodejitsu/kyuri/blob/master/src/i18n-generator.rb)
+
+
+(we are CLOSE to gherkin compliance, we will be working on 100% in v0.2.0)
 
 ## Installation
 
