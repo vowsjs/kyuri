@@ -80,7 +80,7 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 ### created by [Charlie Robbins][7] for Node Knockout 2010
 ### big ups to [Jeremy Ashkenas][5] for being a languages black-belt and making [coffee-script][6]
 
-[8][gherkin] is Copyright (c) 2009-2010 Mike Sassak, Gregory Hnatiuk, Aslak Hellesøy, see [9][GHERKIN.LIC] for more details.
+### [gherkin][8] is Copyright (c) 2009-2010 Mike Sassak, Gregory Hnatiuk, Aslak Hellesøy, see [GHERKIN.LIC][9] for more details.
 
 [0]: http://cukes.info "Cucumber"
 [1]: http://nodejs.org "node.js"
