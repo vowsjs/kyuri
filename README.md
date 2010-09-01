@@ -80,6 +80,8 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 ### created by [Charlie Robbins][7] for Node Knockout 2010
 ### big ups to [Jeremy Ashkenas][5] for being a languages black-belt and making [coffee-script][6]
 
+### [gherkin][8] is Copyright (c) 2009-2010 Mike Sassak, Gregory Hnatiuk, Aslak Hellesøy, see [GHERKIN.LIC][9] for more details.
+
 [0]: http://cukes.info "Cucumber"
 [1]: http://nodejs.org "node.js"
 [2]: http://github.com/nodejitsu/prenup "prenup"
@@ -89,3 +91,4 @@ kyuri is meant to be a low-level tool. if you want to compose Features and Scena
 [6]: http://github.com/jashkenas/coffee-script "coffee-script"
 [7]: http://github.com/indexzero "Charlie Robbins"
 [8]: http://wiki.github.com/aslakhellesoy/cucumber/gherkin "gherkin"
+[9]: http://github.com/nodejitsu/kyuri/blob/master/GHERKIN.LIC "GHERKIN.LIC"
