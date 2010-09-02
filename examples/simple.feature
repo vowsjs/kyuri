@@ -3,6 +3,8 @@ Feature: Addition
 	As a math idiot
 	I want to be told the sum of two numbers
 	
+	@tag1
+	#AND A COMMENT!!!
 	Scenario: Add two numbers
 		"""
 		Hey I'm a pystring, check me out now
