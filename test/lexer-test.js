@@ -41,15 +41,15 @@ vows.describe('kyuri/lexer').addBatch({
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
       "should lex correctly": function (err, data) {
         assert.isNotNull(data.toString());
-        eyes.inspect(kyuri.tokens(data.toString()));
+        inspect(kyuri.tokens(data.toString()));
       }
-    },
+    }/*,
     "lexing complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should lex correctly": function (err, data) {
         assert.isNotNull(data.toString());
         inspect(kyuri.tokens(data.toString()));
       }
-    }
+    }*/
   }
 }).export(module);
