@@ -43,13 +43,13 @@ vows.describe('kyuri/parser').addBatch({
         assert.isNotNull(data.toString());
         inspect(kyuri.parse(data.toString()));
       }
-    }/*,
+    },
     "parsing complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should parse correctly": function (err, data) {
         assert.isNotNull(data.toString());
         inspect(kyuri.parse(data.toString()));
       }
-    }*/
+    }
   }
 }).export(module);

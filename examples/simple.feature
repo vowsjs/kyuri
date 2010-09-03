@@ -3,7 +3,7 @@ Feature: Addition     #AND A COMMENT!!!
 	As a math idiot
 	I want to be told the sum of two numbers
 	
-	@tag1
+	@tag1 @tag2
 #AND A COMMENT!!!
 	Scenario: Add two numbers
 		"""
