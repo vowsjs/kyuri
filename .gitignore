@@ -1,2 +1,4 @@
 test/output/*.js
+test/output/vows/*.js
+test/output/steps/*.js
 test/beta-test.js
