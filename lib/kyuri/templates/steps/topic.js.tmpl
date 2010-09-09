@@ -1,0 +1,13 @@
+Steps.{{operator}}(/^{{title}}$/, function (topic) {
+  return function () {
+    // Always use or extend the same topic since you don't 
+    // know how nested or not nested you are at this point
+    topic = topic || {};
+    
+    /* Put your {{operator}} code here. */
+    
+    return topic;
+  };
+});
+
+{{next}}

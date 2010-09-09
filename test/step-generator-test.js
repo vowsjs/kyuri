@@ -1,5 +1,5 @@
 /*
- * generator-test.js: Tests for the Kyuri vows generator.
+ * step-generator-test.js: Tests for the Kyuri step generator.
  *
  * (C) 2010 Charlie Robbins
  * MIT LICENSE
@@ -36,19 +36,29 @@ var readAllLines = function (filename) {
 };
 
 vows.describe('kyuri/generator').addBatch({
-  "When using the Kyuri default code generator,": {
+  "When using the Kyuri step generator,": {
     "compiling simple.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
       "should parse correctly": function (err, data) {
-        assert.isNotNull(data.toString());
-        kyuri.compile(data.toString(), { directory: path.join(__dirname, 'output/vows') });
+        var text = data.toString();
+        
+        assert.isNotNull(text);
+        kyuri.compile(text, { 
+          directory: path.join(__dirname, 'output/steps'),
+          target: 'steps'
+        });
       }
     },
     "compiling complex.feature": {
       topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
       "should parse correctly": function (err, data) {
-        assert.isNotNull(data.toString());
-        kyuri.compile(data.toString(), { directory: path.join(__dirname, 'output/vows') });
+        var text = data.toString();
+        
+        assert.isNotNull(text);
+        kyuri.compile(text, { 
+          directory: path.join(__dirname, 'output/steps'),
+          target: 'steps'
+        });
       }
     }
   }
