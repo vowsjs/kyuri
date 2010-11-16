@@ -19,14 +19,14 @@ vows.describe('kyuri/lexer/simple').addBatch({
       topic: kyuri.tokens('Feature: Addition boi'),
       "should be respond with a single token literal": function (tokens) {
         assert.instanceOf(tokens, Array);
-        assert.equal(tokens.length, 1);
+        assert.equal(tokens.length, 4);
       }
     },
     "a scenario token": {
       topic: kyuri.tokens('Scenario: Simple math boi'),
       "should be respond with a single token literal": function (tokens) {
         assert.instanceOf(tokens, Array);
-        assert.equal(tokens.length, 1);
+        assert.equal(tokens.length, 4);
       }
     }
   }

@@ -153,3 +153,4 @@ var arg, args = [], argv = process.argv.slice(2);
 // and path of test folder.
 var root, testFolder;
 
+sys.puts('Kyuri test runner not currently complete in 0.2.0. In the roadmap for 0.2.1');

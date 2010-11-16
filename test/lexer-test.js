@@ -28,27 +28,31 @@ var kyuri = require('kyuri'),
       },
       maxLength: 4096
     });
-    
-var readAllLines = function (filename) {
+
+function tokenizeAllLines (filename) {
   return function () {
-    fs.readFile(filename, encoding = 'ascii', this.callback);
-  } 
-};
+    var that = this;
+    fs.readFile(filename, encoding = 'ascii', function (err, data) {
+      if (err) return that.callback(err);
+      that.callback(null, kyuri.tokens(data.toString()));
+    });
+  }
+}
 
 vows.describe('kyuri/lexer').addBatch({
   "When using the Kyuri lexer,": {
     "lexing simple.feature": {
-      topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
-      "should lex correctly": function (err, data) {
-        assert.isNotNull(data.toString());
-        inspect(kyuri.tokens(data.toString()));
+      topic: tokenizeAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
+      "should lex correctly": function (err, tokens) {
+        assert.isNull(err);
+        assert.isNotNull(tokens);
       }
     },
     "lexing complex.feature": {
-      topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
-      "should lex correctly": function (err, data) {
-        assert.isNotNull(data.toString());
-        inspect(kyuri.tokens(data.toString()));
+      topic: tokenizeAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
+      "should lex correctly": function (err, tokens) {
+        assert.isNull(err);
+        assert.isNotNull(tokens);
       }
     }
   }

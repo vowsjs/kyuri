@@ -29,7 +29,11 @@ vows.describe('kyuri/parser').addBatch({
         var text = data.toString();
         assert.isNotNull(text);
 
-        var suite = kyuri.runners.vows.createVows('simple.feature', kyuri.parse(data.toString()).ast);        
+        var ast = kyuri.parse(data.toString());
+        assert.isObject(ast);
+        assert.include(ast, 1);
+        
+        var suite = kyuri.runners.vows.createVows('simple.feature', ast);        
         assert.equal(suite.batches.length, 1);
       }
     }

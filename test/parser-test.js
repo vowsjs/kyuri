@@ -29,26 +29,32 @@ var kyuri = require('kyuri'),
       maxLength: 4096
     });
         
-var readAllLines = function (filename) {
+var parseAllLines = function (filename) {
   return function () {
-    fs.readFile(filename, encoding = 'ascii', this.callback);
+    var that = this;
+    fs.readFile(filename, encoding = 'ascii', function (err, data) {
+      if (err) return that.callback(err);
+      that.callback(null, kyuri.parse(data.toString()));
+    });
   } 
 };
 
 vows.describe('kyuri/parser').addBatch({
   "When using the Kyuri parser,": {
     "parsing simple.feature": {
-      topic: readAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
-      "should parse correctly": function (err, data) {
-        assert.isNotNull(data.toString());
-        inspect(kyuri.parse(data.toString()));
+      topic: parseAllLines(path.join(__dirname, '..', 'examples', 'simple.feature')),
+      "should parse correctly": function (err, ast) {
+        assert.isNull(err);
+        assert.isObject(ast);  
+        assert.include(ast, 1);
       }
     },
     "parsing complex.feature": {
-      topic: readAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
-      "should parse correctly": function (err, data) {
-        assert.isNotNull(data.toString());
-        inspect(kyuri.parse(data.toString()));
+      topic: parseAllLines(path.join(__dirname, '..', 'examples', 'complex.feature')),
+      "should parse correctly": function (err, ast) {
+        assert.isNull(err);
+        assert.isObject(ast);  
+        assert.include(ast, 1);
       }
     }
   }
