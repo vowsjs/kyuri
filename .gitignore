@@ -2,3 +2,5 @@ test/output/*.js
 test/output/vows/*.js
 test/output/steps/*.js
 test/beta-test.js
+node_modules/
+node_modules/*
