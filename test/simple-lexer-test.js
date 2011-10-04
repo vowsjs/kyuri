@@ -28,6 +28,27 @@ vows.describe('kyuri/lexer/simple').addBatch({
         assert.instanceOf(tokens, Array);
         assert.equal(tokens.length, 4);
       }
+    },
+    "a tag token": {
+      topic: kyuri.tokens('@tag1'),
+      "should create a single token literal": function(tokens) {
+        assert.instanceOf(tokens, Array);
+        assert.equal(tokens.length, 3);
+      }
+    },
+    "two tags": {
+      topic: kyuri.tokens('@tag1 @tag2'),
+      "should create two tag tokens": function(tokens) {
+        assert.instanceOf(tokens, Array);
+        assert.equal(tokens.length, 4);
+      }
+    },
+    "a step with an '@' symbol": {
+      topic: kyuri.tokens('Given I have a user with email address "paul@done.com"'),
+      "should create a single token literal": function(tokens) {
+        assert.instanceOf(tokens, Array);
+        assert.equal(tokens.length, 4);
+      }
     }
   }
 }).export(module);
