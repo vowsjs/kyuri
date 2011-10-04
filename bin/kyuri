@@ -69,19 +69,30 @@ kyuri.runner = kyuri.runners.cucumber;
 
 var features = [];
 var steps = [];
+var directories = [];
+
 argv.forEach(function (file) {
   if (file.match(featureFileExt)) {
     // Load envDirs first and without steps
-    envDirs.forEach(function (dir) {
-      _loadJavascripts(path.join(path.dirname(file), dir)); 
-    });
-    // Load steps
-    stepsDirs.forEach(function (dir) {
-      _loadJavascripts(path.join(path.dirname(file), dir), steps);
-    });
+    if (directories.indexOf(path.dirname(file)) === (-1)) {
+      directories.push(path.dirname(file));
+    }
     features.push(kyuri.parse(fs.readFileSync(file).toString()));
   }
 });
+
+directories.forEach(function (top) {
+  // Load environments first
+  envDirs.forEach(function (dir) {
+    _loadJavascripts(path.join(top, dir)); 
+  });
+
+  // Load steps
+  stepsDirs.forEach(function (dir) {
+    _loadJavascripts(path.join(top, dir), steps);
+  });
+});
+
 
 var complete = false;
 

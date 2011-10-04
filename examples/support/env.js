@@ -12,7 +12,13 @@ Runner.on('beforeTest', function (done) {
   done();
 });
 
+Runner.on('beforeBackground', function (done) {
+  console.log('beforeBackground event');
+  done();
+});
+
 Runner.on('afterTest', function (done) {
   console.log('afterTest event');
   done();
 });
+
