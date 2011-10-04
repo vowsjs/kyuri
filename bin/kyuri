@@ -48,7 +48,6 @@ var _loadJavascripts = function (directory, steps) {
           if (!fullPath.match(/^\//)) {
             fullPath = path.join(root, fullPath);
           }
-          console.log('Loaded ' + fullPath);
           exported = require(fullPath);
           if (exported && exported.forEach && steps) {
             exported.forEach(function (obj) {
@@ -72,13 +71,28 @@ var steps = [];
 var directories = [];
 
 argv.forEach(function (file) {
-  if (file.match(featureFileExt)) {
-    // Load envDirs first and without steps
-    if (directories.indexOf(path.dirname(file)) === (-1)) {
-      directories.push(path.dirname(file));
+  var stat = fs.statSync(file),
+      files;
+
+  if (stat.isDirectory()) {
+    files = fs.readdirSync(file);
+    for (var i = 0; i < files.length; i++) {
+      // Add the path
+      files[i] = path.join(file, files[i]);
     }
-    features.push(kyuri.parse(fs.readFileSync(file).toString()));
+  } else {
+    files = [file];
   }
+  
+  files.forEach(function (file) {
+    if (file.match(featureFileExt)) {
+      // Load envDirs first and without steps
+      if (directories.indexOf(path.dirname(file)) === (-1)) {
+        directories.push(path.dirname(file));
+      }
+      features.push(kyuri.parse(fs.readFileSync(file).toString()));
+    }
+  });
 });
 
 directories.forEach(function (top) {
@@ -96,13 +110,19 @@ directories.forEach(function (top) {
 
 var complete = false;
 
-kyuri.runners.cucumber.run(features, steps, function (err) {
-  if (err) {
-    console.log('Errors');
+try {
+  kyuri.runners.cucumber.run(features, steps, function () {
+    complete = true;
+  });
+} catch (err) {
+  console.log('Errors');
+  if (err.stack) {
+    console.log(err.stack);
+  } else {
     console.log(err);
-  }
+  } 
   complete = true;
-});
+}
 
 var _waitComplete = function () {
   if (!complete) {
