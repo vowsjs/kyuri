@@ -6,9 +6,7 @@
  *
  */
 
-require.paths.unshift(require('path').join(__dirname, '..', 'lib'));
-
-var kyuri = require('kyuri'),
+var kyuri = require('../../kyuri'),
     vows = require('vows'),
     assert = require('assert'),
     eyes = require('eyes');
