@@ -9,14 +9,14 @@ stepsDirs = ['steps', 'step_definitions'];
 envDirs = ['support'];
 
 var inspect = require('eyes').inspector({
-    stream: null,
-    styles: { string: 'grey', regexp: 'grey' }
+  stream: null,
+  styles: { string: 'grey', regexp: 'grey' }
 });
 
-var kyuri = require('kyuri');
+var kyuri = require('../lib/kyuri');
 
 var help = [
-    "usage: kyuri [FILE, ...]"
+  "usage: kyuri [FILE, ...]"
 ].join('\n');
 
 var root = process.cwd();
@@ -30,27 +30,27 @@ var _loadJavascripts = function (directory, steps) {
     directory = path.join(root, directory);
   }
 
-  if(path.existsSync(directory)) {
+  if (path.existsSync(directory)) {
     var files = fs.readdirSync(directory);
     files.forEach(function (file) {
       var fullPath = path.join(directory, file),
-        stats = fs.statSync(fullPath),
-        exported;
+          stats = fs.statSync(fullPath),
+          exported;
     
       if (stats.isDirectory()) {
-        _loadJavascripts(fullPath, steps);
-      } else {
-        if (file.match(/\.js$/)) {
-          // Add root to all relative paths
-          if (!fullPath.match(/^\//)) {
-            fullPath = path.join(root, fullPath);
-          }
-          exported = require(fullPath);
-          if (exported && exported.forEach && steps) {
-            exported.forEach(function (obj) {
-              steps.push(obj); // Pass-by-reference array must be modified in place
-            })
-          }
+        return _loadJavascripts(fullPath, steps);
+      } 
+
+      if (file.match(/\.js$/)) {
+        // Add root to all relative paths
+        if (!fullPath.match(/^\//)) {
+          fullPath = path.join(root, fullPath);
+        }
+        exported = require(fullPath);
+        if (exported && exported.forEach && steps) {
+          exported.forEach(function (obj) {
+            steps.push(obj); // Pass-by-reference array must be modified in place
+          })
         }
       }
     }); 
@@ -77,7 +77,8 @@ argv.forEach(function (file) {
       // Add the path
       files[i] = path.join(file, files[i]);
     }
-  } else {
+  } 
+  else {
     files = [file];
   }
   
@@ -111,11 +112,13 @@ try {
   kyuri.runners.cucumber.run(features, steps, function () {
     complete = true;
   });
-} catch (err) {
+} 
+catch (err) {
   console.log('Errors');
   if (err.stack) {
     console.log(err.stack);
-  } else {
+  } 
+  else {
     console.log(err);
   } 
   complete = true;
@@ -126,4 +129,5 @@ var _waitComplete = function () {
     process.nextTick(_waitComplete);
   }
 };
+
 _waitComplete();
