@@ -1,8 +1,11 @@
 {
   "name": "kyuri",
   "description": "a cucumber implementation with a few extra asynchronous keywords. supports 160+ languages and exports to VowsJS stubs",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "contributors": [
+    { "name": "Paul Covell", "email": "paul@done.com" }
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/nodejitsu/kyuri.git" 
@@ -12,11 +15,11 @@
     "underscore": "1.1.x",
     "vows": "0.5.x",
     "eyes": "0.1.x",
-    "colors": "0.5.x",
+    "colors": "0.6.x",
     "lingo": "0.0.x"
   },
   "devDependencies": {
-    "vows": "0.5.x"
+    "vows": "0.6.x"
   },
   "bin": "./bin/kyuri",
   "main": "./lib/kyuri",
