@@ -43,9 +43,7 @@ var _loadJavascripts = function (directory, steps) {
       } 
 
       try {
-        console.log('trying');
         require('coffee-script');
-        console.log('success');
         fileMatcher = /\.(coffee|js)$/;
       }
       catch (e) {}
