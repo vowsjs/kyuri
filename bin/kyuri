@@ -30,7 +30,7 @@ var _loadJavascripts = function (directory, steps) {
     directory = path.join(root, directory);
   }
 
-  if (path.existsSync(directory)) {
+  if (fs.existsSync(directory)) {
     var files = fs.readdirSync(directory);
     files.forEach(function (file) {
       var fullPath = path.join(directory, file),
