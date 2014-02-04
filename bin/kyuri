@@ -127,6 +127,10 @@ catch (err) {
 var _waitComplete = function () {
   if (!complete) {
     process.nextTick(_waitComplete);
+  } else { 
+    // make sure the script exits even if something we are testing has anohter
+    // wait for next tick loop going. 
+    process.exit();
   }
 };
 

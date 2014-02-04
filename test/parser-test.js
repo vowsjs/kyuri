@@ -54,6 +54,14 @@ vows.describe('kyuri/parser').addBatch({
         assert.isObject(ast);  
         assert.include(ast, 1);
       }
+    },
+    "parsing complex_space.feature": {
+      topic: parseAllLines(path.join(__dirname, '..', 'examples', 'complex_space.feature')),
+      "should parse correctly": function (err, ast) {
+        assert.isNull(err);
+        assert.isObject(ast);  
+        assert.include(ast, 1);
+      }
     }
   }
 }).export(module);
