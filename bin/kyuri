@@ -35,13 +35,20 @@ var _loadJavascripts = function (directory, steps) {
     files.forEach(function (file) {
       var fullPath = path.join(directory, file),
           stats = fs.statSync(fullPath),
+          fileMatcher = /\.js$/,
           exported;
     
       if (stats.isDirectory()) {
         return _loadJavascripts(fullPath, steps);
       } 
 
-      if (file.match(/\.js$/)) {
+      try {
+        require('coffee-script');
+        fileMatcher = /\.(coffee|js)$/;
+      }
+      catch (e) {}
+
+      if (fileMatcher.test(file)) {
         // Add root to all relative paths
         if (!fullPath.match(/^\//)) {
           fullPath = path.join(root, fullPath);
